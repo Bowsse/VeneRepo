@@ -1,0 +1,60 @@
+﻿<Page
+    x:Class="VenePeli.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VenePeli"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid ManipulationMode="None">
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/bg.png"/>
+        </Grid.Background>
+        <Image x:Name="gamebg" Source="Assets/motorshop.png" IsHitTestVisible="False" Stretch="Fill" Margin="0"/>
+        <Image x:Name="shopbg" Source="Assets/motorshop.png" IsHitTestVisible="False" Visibility="Collapsed" Stretch="Fill" Margin="0"/>
+        <Button x:Name="btnMove" Content="Move" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnMove_Click" Margin="188,182,115,426" Visibility="Collapsed"/>
+        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Center" VerticalAlignment="Center" Click="btnStart_Click" Height="47"  Width="74" Background="{ThemeResource LoopingSelectorSelectionBackgroundThemeBrush}"/>
+        <Slider x:Name="sliderSpeed" Margin="133,372,127,224" Width="100" Minimum="1" Maximum="5" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+        <ProgressBar x:Name="progLake" Height="29" VerticalAlignment="Center" Width="129" Maximum="15" Margin="188,219,43,392" HorizontalAlignment="Center" Visibility="Collapsed"/>
+        <ProgressBar x:Name="progFuel" Height="32" VerticalAlignment="Center" Width="129" Maximum="20" Background="#FFC3C3C3" Margin="188,312,43,296" HorizontalAlignment="Center" Visibility="Collapsed">
+            <ProgressBar.Foreground>
+                <ImageBrush ImageSource="Assets/fuelm.png" Stretch="None"/>
+            </ProgressBar.Foreground>
+        </ProgressBar>
+        <TextBox x:Name="tbTime" TextWrapping="Wrap" Text="" IsReadOnly="True" Margin="175,129,43,479" HorizontalAlignment="Center" VerticalAlignment="Center" Width="142" TextAlignment="Center" Visibility="Collapsed"/>
+        <Button x:Name="btnMotor1" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="btnMotor1_Click" Height="173" Width="74" Margin="101,76,185,391">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/pikkumono.png" Stretch="None"/>
+            </Button.Background>
+            
+        </Button>
+        <Button x:Name="btnMotor2" Content="" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="btnMotor2_Click" Height="173" Width="72" Margin="212,76,76,391">
+            <Button.Foreground>
+                <ImageBrush Stretch="None" ImageSource="Assets/isomono.png"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="ms-appx:///Assets/isomono.png" Stretch="None"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnBeer" Content="" HorizontalAlignment="Center" Margin="101,162,185,399" VerticalAlignment="Center" Click="btnBeer_Click" Height="79" Width="74" Visibility="Collapsed">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="Assets/kalja.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnFuel" Content="" HorizontalAlignment="Center" Margin="188,162,76,399" VerticalAlignment="Center" Click="btnFuel_Click" Height="79" Width="96" Visibility="Collapsed">
+            <Button.Background>
+                <ImageBrush Stretch="None" ImageSource="Assets/kannu.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="tbMoney" HorizontalAlignment="Center" Margin="188,60,43,548" TextWrapping="Wrap" Text="" VerticalAlignment="Center" IsReadOnly="True" BorderThickness="0" Width="129" Visibility="Collapsed"/>
+        <Button x:Name="btnReturn" Content="Return" HorizontalAlignment="Center" Margin="101,312,195,296" VerticalAlignment="Center" Click="btnReturn_Click" Visibility="Collapsed"/>
+        <TextBox x:Name="tbBeer" HorizontalAlignment="Center" Margin="188,97,43,511" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="129" IsReadOnly="True" BorderThickness="0" Visibility="Collapsed"/>
+        <TextBlock x:Name="tbBonus" HorizontalAlignment="Center" Margin="175,92,43,516" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="142"  Visibility="Collapsed"/>
+        <TextBlock x:Name="tbScores" HorizontalAlignment="Left" Margin="143,489,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="116" Width="74"/>
+        <TextBlock x:Name="tbLakelbl" HorizontalAlignment="Center" Margin="102,214,177,394" TextWrapping="Wrap" Text="Progress:" VerticalAlignment="Center" Width="81" Visibility="Collapsed"  />
+        <TextBlock x:Name="tbSpeedlbl" HorizontalAlignment="Center" Margin="57,379,232,229" TextWrapping="Wrap" Text="Speed:" VerticalAlignment="Center" Visibility="Collapsed"  />
+        <TextBlock x:Name="tbFuellbl" HorizontalAlignment="Center" Margin="143,324,167,296" TextWrapping="Wrap" Text="Fuel:" VerticalAlignment="Center" Width="50" Visibility="Collapsed"  />
+    </Grid>
+
+</Page>
